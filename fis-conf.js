@@ -1,6 +1,6 @@
 fis.config.merge({
     project:{
-        exclude:[/less\//,'LICENSE','README.md']
+        exclude:['README.md']
     },
     roadmap : {
         domain : {
@@ -13,12 +13,16 @@ fis.config.merge({
                 release : '/static/$1'
             },
             {
-                reg : /^\/dist\/css\/(.*\.css)/i,
-                release : '/static/css/$1'
+                reg : /^\/dist\/css\/(.*\.css|.*\.styl)/i,
+                release : '/themes/css/$1'
             },
             {
-                reg : /^\/dist\/(js|data)\/(.*\.js)/i,
-                release : '/static/$1/$2'
+                reg : /^\/dist\/js\/(.*\.js)/i,
+                release : '/themes/js/$1'
+            },
+            {
+                reg : /^\/dist\/data\/(.*\.js)/i,
+                release : '/static/data/$1'
             }
         ]
     }
