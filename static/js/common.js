@@ -2,30 +2,14 @@ $(function () {
 
     //侧栏收缩
     $('#side-menu').metisMenu();
-    var tabIndex=1;
-    $('#side-menu a').on('click',function(e){
-        e.stopPropagation();
-        e.preventDefault();
-        var strHref=$(this).attr('href'),
-            strText=$(this).html();
-        if(strHref=='javascript:;'||strHref=='#'){
-            return false;
-        }
-        TabControlAppend(tabIndex, strText, strHref);
-        tabIndex++;
-
-        $("iframe").load(function () {
-            var mainheight = $(this).contents().find("body").height();
-            $(this).height(mainheight);
-            $(this).width('100%');
-        });
-    });
+    //$('#side-menu li').on('click',function(){
+    //    $(this).addClass('active').siblings('li').removeClass('active');
+    //});
 
     //展示区域iframe高度计算
-    $("iframe").load(function () {
+    $("#frameWrapper").load(function () {
         var mainheight = $(this).contents().find("body").height();
         $(this).height(mainheight);
-        $(this).width('100%');
     });
 
     //title提示框美化
@@ -49,4 +33,11 @@ $(function () {
         }
     });
 
+    var url = window.location;
+    var element = $('ul.nav a').filter(function() {
+        return this.href == url || url.href.indexOf(this.href) == 0;
+    }).addClass('active').parent().parent().addClass('in').parent();
+    if (element.is('li')) {
+        element.addClass('active');
+    }
 });

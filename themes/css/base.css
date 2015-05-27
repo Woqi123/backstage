@@ -83,7 +83,8 @@ body {
 .sidebar ul li a.active {
   background-color: #eee;
 }
-.sidebar .arrow {
+.sidebar .arrow,
+.sidebar .glyphicon-plus {
   float: right;
 }
 .sidebar .fa.arrow:before {
@@ -91,6 +92,9 @@ body {
 }
 .sidebar .active > a > .fa.arrow:before {
   content: "\f107";
+}
+.sidebar .active > a > .glyphicon-plus {
+  transform: rotate(45deg);
 }
 .sidebar .nav-second-level li,
 .sidebar .nav-third-level li {
@@ -288,5 +292,53 @@ table.dataTable thead .sorting:after {
 }
 .navbar-top-user a {
   text-decoration: none;
+}
+.tab-control .tab {
+  overflow: hidden;
+}
+.tab-control .tab ul {
+  border-bottom: 1px solid #ddd;
+  color: #337ab7;
+  width: 9999px;
+}
+.tab-control .tab li {
+  position: relative;
+  display: inline-block;
+  float: left;
+  padding: 10px 15px;
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  width: 140px;
+  text-align: center;
+}
+.tab-control .tab li.hover {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-bottom-color: transparent;
+}
+.tab-control .tab li a {
+  float: right;
+  margin-left: 5px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 20px;
+  font-size: 0;
+  text-decoration: none;
+}
+.tab-control .tab li a::before {
+  font-family: 'FontAwesome';
+  font-size: 14px;
+  content: "\f00d";
+}
+.tab-control .main iframe {
+  display: none;
+}
+.tab-control .main iframe.visited {
+  display: block;
 }
 /*# sourceMappingURL=base.css.map */

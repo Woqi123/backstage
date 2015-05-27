@@ -100,7 +100,7 @@ body {
       }
     }
   }
-  .arrow {
+  .arrow ,.glyphicon-plus{
     float: right
   }
   .fa.arrow:before {
@@ -108,6 +108,9 @@ body {
   }
   .active > a > .fa.arrow:before {
     content: "\f107";
+  }
+  .active > a > .glyphicon-plus {
+    transform:rotate(45deg);
   }
   .nav-second-level li,.nav-third-level li {
     border-bottom: none !important;
@@ -353,5 +356,58 @@ table.dataTable thead .sorting:after {
   padding 15px 20px
   a{
     text-decoration none
+  }
+}
+
+.tab-control{
+  .tab{
+    overflow: hidden
+    ul{
+      border-bottom: 1px solid #ddd;
+      color: #337ab7;
+      width: 9999px
+    }
+    li{
+      position: relative;
+      display: inline-block
+      float: left;
+      padding: 10px 15px;
+      margin-right: 2px
+      line-height: 1.42857143;
+      border-radius: 4px 4px 0 0;
+      border: 1px solid transparent;
+      margin-bottom: -1px
+      cursor: pointer;
+      width: 140px
+      text-align: center
+      &.hover{
+        border: 1px solid #ddd;
+        background-color: #fff;
+        border-bottom-color: transparent;
+      }
+      a{
+        float: right
+        margin-left: 5px
+        display: inline-block
+        width: 15px
+        height: 15px
+        line-height: 20px
+        font-size: 0
+        text-decoration: none;
+        &::before{
+          font-family: 'FontAwesome';
+          font-size:14px
+          content: "\f00d";
+        }
+      }
+    }
+  }
+  .main{
+    iframe{
+      display: none
+      &.visited{
+        display: block
+      }
+    }
   }
 }
