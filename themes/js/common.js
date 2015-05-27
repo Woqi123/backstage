@@ -7,7 +7,7 @@ $(function () {
         e.stopPropagation();
         e.preventDefault();
         var strHref=$(this).attr('href'),
-            strText=$(this).html();
+            strText=$(this).text();
         if(strHref=='javascript:;'||strHref=='#'){
             return false;
         }
