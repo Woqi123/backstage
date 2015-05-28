@@ -336,9 +336,9 @@ table.dataTable thead .sorting:after {
   content: "\f00d";
 }
 .tab-control .main iframe {
-  display: none;
+  display: block;
 }
 .tab-control .main iframe.visited {
-  display: block;
+  display: none;
 }
 /*# sourceMappingURL=base.css.map */
