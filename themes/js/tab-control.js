@@ -4,15 +4,14 @@
     var tabControl = jQuery('div.tab-control');
     var tabControl_tab = jQuery('div.tab-control div.tab');
     var tabControl_tab_ul = jQuery('div.tab-control div.tab ul');
-    var tabControl_tab_prev = jQuery('div.tab-control div.tab input.prev');
-    var tabControl_tab_next = jQuery('div.tab-control div.tab input.next');
-    var tabControl_tab_find = jQuery('div.tab-control div.tab input.find');
+    var tabControl_tab_prev = jQuery('div.tab-control div.tab .prev');
+    var tabControl_tab_next = jQuery('div.tab-control div.tab .next');
+    var tabControl_tab_find = jQuery('div.tab-control div.tab .find');
     var tabControl_tabFind = jQuery('div.tab-control div.tab-find');
     var tabControl_tabFind_form = jQuery('div.tab-control div.tab-find form');
     var tabControl_tabFind_ul = jQuery('div.tab-control div.tab-find ul');
     var tabControl_tabFind_text = jQuery('div.tab-control div.tab-find input.text');
     var tabControl_main = jQuery('div.tab-control div.main');
-
 
     /* 函数 */
 
@@ -109,10 +108,10 @@
             jQuery(tabControl).unbind('mouseup', clear);
 
             //向前状态
-            jQuery(tabControl_tab_prev).attr('class', 'prev' + ($[0].style.marginLeft ? ' scroll' : ''));
+            //jQuery(tabControl_tab_prev).attr('class', 'prev fa fa-chevron-left' + ($[0].style.marginLeft ? ' scroll' : ''));
 
             //向后状态
-            jQuery(tabControl_tab_next).attr('class', 'next' + (offset($.length - 1) > 5 ? ' scroll' : ''));
+            //jQuery(tabControl_tab_next).attr('class', 'next fa fa-chevron-right' + (offset($.length - 1) > 5 ? ' scroll' : ''));
 
         };
 
@@ -234,10 +233,10 @@
         }
 
         //向前状态
-        jQuery(tabControl_tab_prev).attr('class', 'prev' + ($[0].style.marginLeft ? ' scroll' : ''));
+        //jQuery(tabControl_tab_prev).attr('class', 'prev fa fa-chevron-left' + ($[0].style.marginLeft ? ' scroll' : ''));
 
         //向后状态
-        jQuery(tabControl_tab_next).attr('class', 'next' + (offset($.length - 1) > 5 ? ' scroll' : ''));
+        //jQuery(tabControl_tab_next).attr('class', 'next fa fa-chevron-right' + (offset($.length - 1) > 5 ? ' scroll' : ''));
 
         //改变尺寸
         jQuery(tabControl_main).css('height', (jQuery(document).height() - 160) + 'px');
@@ -301,39 +300,24 @@
 
     };
 
-    var find_over = function (e/* OBJECT event */) {
+    //移入显示列表
+    var find_over = function () {
+        $(tabControl_tabFind).removeClass('hidden');
+    };
 
-        try {
+    //移出隐藏列表显示
+    var find_out = function () {
 
-            var t = e.target;
+        var overTime = setTimeout(function () {
+            $(tabControl_tabFind).addClass('hidden');
+        }, 500);
 
-            if (t.className == 'find') {
-
-                //显示
-                jQuery(tabControl_tabFind).attr('class', 'tab-find');
-
-                //背景
-                jQuery(tabControl_tabFind_form).attr('class', jQuery(tabControl_tabFind_text).val() ? 'hover' : '');
-
-            } else {
-
-                for (t; t; t = t.parentNode) {
-
-                    if (t.className.indexOf('tab-find') > -1) {
-                        return;
-                    }
-
-                }
-
-            }
-
-        } catch (ex) {
-
-            //隐藏
-            jQuery(tabControl_tabFind).attr('class', 'tab-find hidden');
-
-        }
-
+        $(tabControl_tabFind).mouseenter(function () {
+            clearTimeout(overTime);
+            $(this).mouseleave(function () {
+                $(tabControl_tabFind).addClass('hidden');
+            });
+        });
     };
 
     var find_submit = function (e/* OBJECT event */) {
@@ -404,15 +388,19 @@
     //搜索提交
     jQuery(tabControl_tabFind_form).submit(find_submit);
 
-    //搜索显隐
-    jQuery(document).mouseover(find_over);
+    //移入显示搜索
+    jQuery(tabControl_tab_find).mouseover(find_over);
+
+    //移出隐藏搜索
+    jQuery(tabControl_tab_find).mouseout(find_out);
 
     jQuery(tabControl_tab_prev).mousedown(prev);
     jQuery(tabControl_tab_next).mousedown(next);
 
 
-    TabControlAppend = append;
-    TabControlRemove = remove;
+    //暴露成全局变量
+    window.TabControlAppend = append;
+    window.TabControlRemove = remove;
 
     change();
 
