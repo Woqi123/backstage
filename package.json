@@ -20,6 +20,8 @@
     "bootstrap": "^3.3.6",
     "font-awesome": "^4.5.0",
     "jquery": "^2.2.0",
-    "metismenu": "^2.4.0"
+    "metismenu": "^2.4.0",
+    "require-css": "^0.1.8",
+    "requirejs": "^2.1.22"
   }
 }

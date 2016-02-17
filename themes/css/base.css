@@ -5,22 +5,14 @@ body {
   width: 100%;
 }
 #page-wrapper {
-  padding: 0 15px;
   background-color: #fff;
+  position: inherit;
+  margin: 0 0 0 250px;
+  padding: 30px;
+  border-left: 1px solid #e8e8e8;
 }
 #page-wrapper .breadcrumb {
-  margin-top: 20px;
-}
-@media (min-width: 768px) {
-  .breadcrumb {
-    margin-top: inherit;
-  }
-  #page-wrapper {
-    position: inherit;
-    margin: 0 0 0 250px;
-    padding: 30px;
-    border-left: 1px solid #e8e8e8;
-  }
+  margin-top: inherit;
 }
 .navbar-static-top {
   margin-bottom: 0;
