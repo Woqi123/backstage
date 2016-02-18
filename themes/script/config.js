@@ -14,7 +14,7 @@ require.config({
     },
     shim:{
         'bootstrap':{
-            deps:['jquery','css!/libs/bootstrap/dist/css/bootstrap.min.css','css!/libs/font-awesome/css/font-awesome.min.css']
+            deps:['jquery','css!/libs/font-awesome/css/font-awesome.min.css']
         },
         'module/base':{
             deps:['jquery','bootstrap']
