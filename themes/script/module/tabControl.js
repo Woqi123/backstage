@@ -153,8 +153,8 @@ define(function (require, exports, module) {
 
         } else if (t) {
 
-            jQuery(tabControl_tab_ul).append('<li index="' + i + '" tab="' + t + '" class="hover">' + t + '<a href="javascript:;">关闭</a></li>');
-            jQuery(tabControl_tabFind_ul).append('<li index="' + i + '" tab="' + t + '">' + t + '<a href="javascript:;">关闭</a></li>');
+            jQuery(tabControl_tab_ul).append('<li index="' + i + '" id="' + i + '" tab="' + t + '" class="hover">' + t + '<a href="javascript:;">关闭</a></li>');
+            jQuery(tabControl_tabFind_ul).append('<li index="' + i + '" id="' + i + '" tab="' + t + '">' + t + '<a href="javascript:;">关闭</a></li>');
             jQuery(tabControl_main).append('<iframe src="' + h + '" scrolling="auto" frameborder="0" reload="' + r + '"></iframe>');
 
         }

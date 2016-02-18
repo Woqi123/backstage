@@ -23,5 +23,12 @@
     "metismenu": "^2.4.0",
     "require-css": "^0.1.8",
     "requirejs": "^2.1.22"
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^2.3.1",
+    "gulp-load-plugins": "^1.2.0",
+    "yargs": "^4.1.0"
   }
 }
