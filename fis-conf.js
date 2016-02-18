@@ -1,1 +1,1 @@
-fis.set('project.ignore', ['output/**', 'fis-conf.js']);
+//fis.set('project.ignore', ['output/**', 'fis-conf.js']);
