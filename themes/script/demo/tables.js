@@ -1,9 +1,9 @@
 define(function (require, exports, module) {
 
-    require('datatables');
-    require('datatables-beautify');
+    //require('datatables');
+    require('datatables-bt');
 
-    //--------------------------------------------------【侧栏收缩】
+    //--------------------------------------------------【表格分页】
 
     $('#dataTables-example').dataTable({
         responsive: true

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "fis3 server start",
+    "clean": "fis3 server clean",
+    "publish": "fis3 release -w"
   },
   "repository": {
     "type": "git",
@@ -16,20 +18,7 @@
     "url": "https://github.com/xjchenhao/backstage/issues"
   },
   "homepage": "https://github.com/xjchenhao/backstage#readme",
-  "dependencies": {
-//    "bootstrap": "^3.3.6",
-//    "datatables": "^1.10.9",
-//    "font-awesome": "^4.5.0",
-//    "jquery": "^2.2.0",
-//    "metismenu": "^2.4.0",
-//    "require-css": "^0.1.8",
-//    "requirejs": "^2.1.22"
-  },
   "devDependencies": {
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-connect": "^2.3.1",
-    "gulp-load-plugins": "^1.2.0",
-    "yargs": "^4.1.0"
+    "fis3": "^3.3.16"
   }
 }

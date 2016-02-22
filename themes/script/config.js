@@ -5,7 +5,8 @@ require.config({
         bootstrap:'/libs/bootstrap/dist/js/bootstrap.min',
         metisMenu:'/libs/metismenu/dist/metisMenu.min',
         datatables:'/libs/datatables/media/js/jquery.dataTables',
-        'datatables-beautify':'/libs/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min'
+        'datatables-bt':'/libs/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min',
+        echarts:'/libs/echarts/dist/echarts.min'
     },
     map: {
         '*': {
@@ -22,7 +23,7 @@ require.config({
         'datatables':{
             deps:['jquery']
         },
-        'datatables-beautify':{
+        'datatables-bt':{
             deps:['datatables','css!/libs/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css']
         }
     }

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="import" href="includes/hdMeta.html?__inline">
+    <title>echarts</title>
+    <link rel="import" href="includes/hdStyle.html?__inline">
+</head>
+<body>
+<div id="wrapper">
+    <link rel="import" href="includes/navbar.html?__inline">
+
+    <main id="page-wrapper">
+        <link rel="import" href="includes/breadcrumb.html?__inline">
+
+        <div id="pieChart" style="width: 100%;height:400px;"></div>
+        <div id="lineChart" style="width: 100%;height:400px;"></div>
+        <div id="barChart" style="width: 100%;height:400px;"></div>
+    </main>
+</div>
+<script src="/libs/requirejs/require.js"></script>
+<script src="/themes/script/config.js"></script>
+<script>
+    require(['module/base','demo/echarts']);
+</script>
+</body>
+</html>
