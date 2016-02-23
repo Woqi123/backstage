@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="import" href="includes/hdMeta.html?__inline">
+    <title>datepicker</title>
+    <link rel="import" href="includes/hdStyle.html?__inline">
+</head>
+<body>
+<div id="wrapper">
+    <link rel="import" href="includes/navbar.html?__inline">
+
+    <main id="page-wrapper">
+        <link rel="import" href="includes/breadcrumb.html?__inline">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="input-group date">
+                    <input type="text" class="form-control" id="datepicker1">
+
+                    <div class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="input-group input-daterange">
+                    <input type="text" class="form-control" value="2012/04/05">
+                    <span class="input-group-addon">to</span>
+                    <input type="text" class="form-control" value="2012/04/19">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 show-grid">
+                <div class="well">
+                    <h4>datepicker Usage Information</h4>
+                    <p>datepicker is a very flexible, advanced tables plugin for jQuery. </p>
+                    <a class="btn btn-default btn-lg btn-block" target="_blank" href="http://bootstrap-datepicker.readthedocs.org/en/latest/">View DataTables Documentation</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="/libs/requirejs/require.js"></script>
+<script src="/themes/script/config.js"></script>
+<script>
+    require(['module/base', 'demo/datepicker']);
+</script>
+</body>
+</html>
