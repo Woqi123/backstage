@@ -6,7 +6,7 @@
   "scripts": {
     "server": "fis3 server start",
     "clean": "fis3 server clean",
-    "publish": "fis3 release -w"
+    "demo": "fis3 release -w"
   },
   "repository": {
     "type": "git",
