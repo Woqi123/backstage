@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="import" href="includes/hdMeta.html?__inline">
+    <title>treeView</title>
+    <link rel="import" href="includes/hdStyle.html?__inline">
+</head>
+<body>
+<div id="wrapper">
+    <link rel="import" href="includes/navbar.html?__inline">
+
+    <main id="page-wrapper">
+        <link rel="import" href="includes/breadcrumb.html?__inline">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>Blue Theme</h2>
+                <div id="treeview4" class=""></div>
+            </div>
+            <div class="col-sm-4">
+                <h2>Custom Icons</h2>
+                <div id="treeview5" class=""></div>
+            </div>
+            <div class="col-sm-4">
+                <h2>Tags as Badges</h2>
+                <div id="treeview6" class=""></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 show-grid">
+                <div class="well">
+                    <h4>bootstrap-treeview Usage Information</h4>
+                    <p>bootstrap-treeview is a very flexible, advanced tables plugin for jQuery. </p>
+                    <a class="btn btn-default btn-lg btn-block" target="_blank" href="https://github.com/jonmiles/bootstrap-treeview">View DataTables Documentation</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="/libs/requirejs/require.js"></script>
+<script src="/themes/script/config.js"></script>
+<script>
+    require(['module/base', 'demo/treeview']);
+</script>
+</body>
+</html>

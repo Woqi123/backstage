@@ -8,7 +8,8 @@ require.config({
         'datatables-bt':'/libs/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min',
         echarts:'/libs/echarts/dist/echarts.min',
         'datepicker-base':'/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min',
-        'datepicker':'/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min'
+        'datepicker':'/libs/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min',
+        'treeview':'/libs/bootstrap-treeview/dist/bootstrap-treeview.min'
     },
     map: {
         '*': {
@@ -33,6 +34,9 @@ require.config({
         },
         'datepicker':{
             deps:['jquery','datepicker-base']
+        },
+        'treeview':{
+            deps:['jquery','css!/libs/bootstrap-treeview/dist/bootstrap-treeview.min.css']
         }
     }
 });
