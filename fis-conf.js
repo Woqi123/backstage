@@ -10,7 +10,7 @@ fis
     .match('::packager', {
         postpackager: fis.plugin('loader', {
             allInOne: false,
-            useInlineMap: true
+            useInlineMap: false
         })
     })
     //.match('/static/(*.html)', {
