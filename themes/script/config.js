@@ -3,7 +3,7 @@ require.config({
     paths: {
         jquery:'../../libs/jquery/dist/jquery.min',
         bootstrap:'../../libs/bootstrap/dist/js/bootstrap.min',
-        metisMenu:'../../libs/metismenu/dist/metisMenu.min',
+        metisMenu:'../../libs/metisMenu/dist/metisMenu.min',
         datatables:'../../libs/datatables/media/js/jquery.dataTables',
         'datatables-bt':'../../libs/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min',
         echarts:'../../libs/echarts/dist/echarts.min',
